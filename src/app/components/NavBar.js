@@ -12,9 +12,9 @@ import Link from "next/link";
 const NavBar = () => {
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "Testimonials", href: "/location" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Services", href: "#" },
+    { name: "Testimonials", href: "#" },
+    { name: "Contact Us", href: "#" },
   ];
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,3 +1,4 @@
+import Footer from './components/Footer'
 import NavBar from './components/NavBar'
 import './globals.css'
 import { Inter, Montserrat, Roboto, Roboto_Mono } from 'next/font/google'
@@ -24,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en"  className={`${montserrat.variable}  ${roboto.variable} font-sans font-serif font-mono`}>
-      <body className={inter.className}><NavBar/>{children}</body>
+      <body className={inter.className}><NavBar/>{children}<Footer/></body>
     </html>
   )
 }
