@@ -25,10 +25,10 @@ const NavBar = () => {
     <div>
       <header className="absolute inset-x-0 top-0 z-50 bg-white">
         <nav
-          className="flex justify-around px-0 lg:px-8 "
+          className="flex justify-around px-0 lg:px-8  "
           aria-label="Global"
         >
-          <div className="flex lg:flex-2  gap-2  w-fit items-center">
+          <div className="flex lg:flex-2  gap-2  w-fit ">
             <Link href="/" className=" p-2.5 flex "  onClick={() => setCurrentPage('Home')} >
               <span className="sr-only">Cesar and Co Construction</span>
               
@@ -53,7 +53,7 @@ const NavBar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className={item.name !== currentPage ? "text-md font-semibold font-serif leading-6 text-black hover:text-dodger-blue-600" : " px-2 py-1 text-md font-semibold font-serif leading-6 bg-roman-coffee-400 rounded-md text-white hover:text-dodger-blue-600 hover:bg-white"}
+                className={item.name !== currentPage ? "text-md font-semibold font-serif leading-6 text-black hover:text-roman-coffee-600" : " px-2 py-1 text-md font-semibold font-serif leading-6 bg-roman-coffee-400 rounded-md text-white hover:text-dodger-blue-600 hover:bg-white"}
                 onClick={(e)=> setCurrentPage(e.target.text)}
               >
                 {item.name}

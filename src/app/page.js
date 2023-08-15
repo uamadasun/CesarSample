@@ -3,18 +3,25 @@ import { roboto } from "./layout";
 import heroImage from "./assets/heroImage.svg";
 import ContactForm from "./components/ContactForm";
 import House from "./assets/about.svg" 
+import Services from "./components/Services";
+import Residential from "./assets/residential.png" 
+import ResidentialShade from "./assets/residentialShade.png" 
+import Commercial from "./assets/commercial.png" 
+import CommercialShade from "./assets/commercialShade.png" 
+import ProjectManagement from "./assets/projectManagement.png" 
+import ProjectManagementShade from "./assets/projectManagementShade.png" 
 
 export default function Home() {
   return (
     <div>
-      <div className="relative isolate overflow-hidden pt-14">
+      <div className="relative isolate overflow-hidden pt-14 border border-white mx-auto items-center">
         <Image
           src={heroImage}
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover"
         />
         
-        <div className="mx-0 max-w-full py-32 sm:py-48 lg:py-56 flex flex-col md:justify-evenly md:flex-row   gap-2 items-center">
+        <div className=" max-w-full py-32 sm:py-48 lg:py-56 flex flex-col md:justify-center md:flex-row gap-2 items-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
           <div className="text-center">
             <h1 className="text-4xl font-bold  text-white sm:text-6xl font-mono">
@@ -36,7 +43,7 @@ export default function Home() {
             </a>
           </div> */}
           </div>
-          <div className="hidden md:flex">
+          <div className="hidden md:flex mx-10">
             <ContactForm />
           </div>
         </div>
@@ -48,8 +55,14 @@ export default function Home() {
         <ContactForm />
         
       </div>
-      <section className="w-full h-96 bg-roman-coffee-400">
-        <h2 className="text-white text-4xl pt-10 text-center font-mono font-black">OUR SERVICES</h2>
+      <section className="w-full h-96 bg-white">
+        <h2 className="text-black text-4xl pt-10 text-center font-serif font-black">OUR SERVICES</h2>
+        <div className="p-5 w-full flex flex-col gap-4 md:flex-row items-center justify-center">
+          <Services service={Residential} serviceShade={ResidentialShade} name={"Residential"}/>
+          <Services  service={Commercial} serviceShade={CommercialShade} name={"Commercial"}/>
+          <Services  service={ProjectManagement} serviceShade={ProjectManagementShade} name={"ProjectManagement"}/>
+
+        </div>
 
       </section>
       

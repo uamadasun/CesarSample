@@ -1,11 +1,11 @@
 export default function ContactForm() {
   return (
-    <div className="relative isolate md:bg-white md:bg-opacity-75 bg-roman-coffee-300 p-6 text-black lg:px-8 font-serif rounded-lg w-3/4 md:w-fit mx-auto sm:mx-auto mb-10 md:mb-0">
+    <div className="relative  bg-white md:bg-opacity-75 p-4 text-black lg:px-8 font-serif rounded-lg w-11/12 md:w-fit mx-auto my-10 md:mb-0">
       <div className="max-w-xl lg:max-w-4xl h-fit">
         <h2 className="text-3xl md:text-2xl font-bold text-gray-900  sm:text-center">
           Let’s talk about your project!
         </h2>
-        <p className="text-lg md:text-md text-white font-serif sm:text-center mb-4">
+        <p className="text-lg md:text-md text-black font-serif sm:text-center mb-4">
           We help companies and individuals build out their dream projects.
         </p>
         <div className=" flex flex-col gap-1 sm:gap-y-20 lg:flex-row">
@@ -93,7 +93,7 @@ export default function ContactForm() {
             <div className="mt-2">
               <button
                 type="submit"
-                className="block w-1/4 mb-2 mx-auto rounded-md bg-black md:bg-roman-coffee-400 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-roman-coffee-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-roman-coffee-600"
+                className="block w-1/2 md:w-1/4 mb-2 mx-auto rounded-md bg-roman-coffee-400 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-roman-coffee-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-roman-coffee-600"
               >
                 Let’s talk!
               </button>
