@@ -56,6 +56,11 @@ module.exports = {
       white: '#ffffff',
       black: '#000000'
     },
+    fontFamily: {
+      sans: ['var(--font-inter)'],
+      mono: ['var(--font-roboto)'],
+      serif:['var(--font-montserrat)']
+    }
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };

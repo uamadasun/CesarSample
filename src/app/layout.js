@@ -1,14 +1,15 @@
+import NavBar from './components/NavBar'
 import './globals.css'
-import { Inter, Montserrat, Roboto } from 'next/font/google'
+import { Inter, Montserrat, Roboto, Roboto_Mono } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
-const montserrat = Montserrat({
+ const montserrat = Montserrat({
   subsets: ['latin'],
   variable: '--font-montserrat',
   display: 'swap',
   weight: ['400', '700']
 })
-const roboto = Roboto({
+ const roboto = Roboto({
   subsets: ['latin'],
   variable: '--font-roboto',
   display: 'swap',
@@ -22,8 +23,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en"  className={`${montserrat.variable}  ${roboto.variable}`}>
-      <body className={inter.className}>{children}</body>
+    <html lang="en"  className={`${montserrat.variable}  ${roboto.variable} font-sans font-serif font-mono`}>
+      <body className={inter.className}><NavBar/>{children}</body>
     </html>
   )
 }
