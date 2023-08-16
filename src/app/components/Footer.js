@@ -13,7 +13,7 @@ const Footer = () => {
              p-1
               bg-white footer"
       >
-        Copyright &copy; 2023 Cesar & Co. Developed and Designed by <Link href="https://uchenna.io" target="_blank"><span className="hover:text-roman-coffee-600 font-bold">uchenna.io</span>.</Link>
+        Copyright &copy; 2023 Cesar & Co. Construction. Developed and Designed by <Link href="https://uchenna.io" target="_blank"><span className="hover:text-roman-coffee-600 font-bold">uchenna.io</span>.</Link>
       </footer>
     </div>
   );

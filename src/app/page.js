@@ -15,7 +15,7 @@ import LoadMap from "./components/Map";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-screen mb-40">
       <div className="relative isolate overflow-hidden pt-14 border border-white mx-auto items-center">
         <Image
           src={heroImage}
@@ -81,13 +81,13 @@ export default function Home() {
         </section>
 
         {/* GOOGLE MAPS */}
-        <section className="relative h-3/4 mt-20 md:mt-32  bg-roman-coffee-300 bg-opacity-75 mb-10">
+        <section className="relative h-3/4 mt-24 md:mt-32  bg-roman-coffee-300 bg-opacity-50 mb-10">
           <LoadMap />
-          <div className="h-20 w-full ">
-            <h2 className=" text-4xl md:text-2xl font-serif text-center mt-4  font-bold">
+          <div className="h-20 w-full mb-5">
+            <h2 className=" text-3xl md:text-xl font-serif text-center mt-4 font-bold mb-1">
               Get a free quote today!
             </h2>
-            <h2 className="text-2xl md:text-xl font-serif text-center ont-bold">
+            <h2 className="text-2xl md:text-xl font-serif text-center">
               Call (832)277-7760
             </h2>
           </div>
