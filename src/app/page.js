@@ -2,14 +2,16 @@ import Image from "next/image";
 import { roboto } from "./layout";
 import heroImage from "./assets/heroImage.svg";
 import ContactForm from "./components/ContactForm";
-import House from "./assets/about.svg" 
+import House from "./assets/about.svg";
 import Services from "./components/Services";
-import Residential from "./assets/residential.png" 
-import ResidentialShade from "./assets/residentialShade.png" 
-import Commercial from "./assets/commercial.png" 
-import CommercialShade from "./assets/commercialShade.png" 
-import ProjectManagement from "./assets/projectManagement.png" 
-import ProjectManagementShade from "./assets/projectManagementShade.png" 
+import Residential from "./assets/residential.png";
+import ResidentialShade from "./assets/residentialShade.png";
+import Commercial from "./assets/commercial.png";
+import CommercialShade from "./assets/commercialShade.png";
+import ProjectManagement from "./assets/projectManagement.png";
+import ProjectManagementShade from "./assets/projectManagementShade.png";
+import Map from "./components/Map";
+import LoadMap from "./components/Map";
 
 export default function Home() {
   return (
@@ -19,8 +21,9 @@ export default function Home() {
           src={heroImage}
           alt=""
           className="absolute inset-0 -z-10 h-full w-full object-cover"
+          priority={true}
         />
-        
+
         <div className=" max-w-full py-32 sm:py-48 lg:py-56 flex flex-col md:justify-center md:flex-row gap-2 items-center">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
           <div className="text-center">
@@ -47,25 +50,49 @@ export default function Home() {
             <ContactForm />
           </div>
         </div>
-
-        
       </div>
       {/* MOBILE CONTACT FORM */}
       <div className=" w-full  block md:hidden mt-10">
         <ContactForm />
-        
       </div>
-      <section className="w-full h-96 bg-white">
-        <h2 className="text-black text-4xl pt-10 text-center font-serif font-black">OUR SERVICES</h2>
-        <div className="p-5 w-full flex flex-col gap-4 md:flex-row items-center justify-center">
-          <Services service={Residential} serviceShade={ResidentialShade} name={"Residential"}/>
-          <Services  service={Commercial} serviceShade={CommercialShade} name={"Commercial"}/>
-          <Services  service={ProjectManagement} serviceShade={ProjectManagementShade} name={"ProjectManagement"}/>
+      {/* SERVICES SECTION */}
+      <div className="flex flex-col">
+        <section className="w-full h-96 mb-72  md:mb-0">
+          <h2 className="text-black text-4xl pt-10 text-center font-serif font-black">
+            OUR SERVICES
+          </h2>
+          <div className="p-5 w-full flex flex-col gap-0 md:gap-10 md:flex-row items-center justify-center ">
+            <Services
+              service={Residential}
+              serviceShade={ResidentialShade}
+              name={"Residential"}
+            />
+            <Services
+              service={Commercial}
+              serviceShade={CommercialShade}
+              name={"Commercial"}
+            />
+            <Services
+              service={ProjectManagement}
+              serviceShade={ProjectManagementShade}
+              name={"ProjectManagement"}
+            />
+          </div>
+        </section>
 
-        </div>
-
-      </section>
-      
+        {/* GOOGLE MAPS */}
+        <section className="relative h-3/4 mt-20 md:mt-32  bg-roman-coffee-300 bg-opacity-75 mb-10">
+          <LoadMap />
+          <div className="h-20 w-full ">
+            <h2 className=" text-4xl md:text-2xl font-serif text-center mt-4  font-bold">
+              Get a free quote today!
+            </h2>
+            <h2 className="text-2xl md:text-xl font-serif text-center ont-bold">
+              Call (832)277-7760
+            </h2>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
